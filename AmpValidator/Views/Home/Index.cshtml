@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-body">
+    <form action="/Home/CheckAmpValidator" method="post">
+
+        <label>Lütfen Link Giriniz</label>
+        <div class="col-md-12">
+
+            <div class="col-md-4"><input type="text" class="form-control" name="url" value="" placeholder="Url" /></div>
+            <div class="col-md-1"><input type="submit" class="btn btn-success" name="name" value="Post" /></div>
+        </div>
+        <div class="col-md-1"><label class="label label-@(Request.QueryString["valid"] =="True"?"success":"danger")">@Request.QueryString["valid"]</label></div>
+    </form>
+
+</div>
